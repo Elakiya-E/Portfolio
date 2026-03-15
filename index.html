@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Elakiya - AI Developer & Full Stack Developer. Building intelligent digital solutions with AI, Machine Learning, and modern web technologies." />
+    <meta name="keywords" content="AI Developer, Full Stack Developer, Machine Learning, React, Python, Portfolio" />
+    <meta name="author" content="Elakiya" />
+    <title>Elakiya | AI & Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Elakiya<span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-download-nav" id="downloadResumeNav" onclick="downloadResume()">
+                    <i class="fas fa-download"></i> Resume
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Opportunities
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Elakiya</span>
+            </h1>
+            <div class="hero-roles">
+                <span class="role-text" id="roleText"></span><span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description">
+                B.Tech IT student with hands-on experience in full-stack development, ML, and browser automation.
+                Skilled in Python, MERN stack, and AI integration across multiple internships and real-world projects.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="btn-secondary" onclick="downloadResume()">
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">5+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">AI</span>
+                    <span class="stat-label">Specialized</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+            <div class="hero-orb orb-3"></div>
+            <div class="floating-icons">
+                <div class="float-icon fi-1"><i class="fab fa-python"></i></div>
+                <div class="float-icon fi-2"><i class="fab fa-react"></i></div>
+                <div class="float-icon fi-3"><i class="fas fa-brain"></i></div>
+                <div class="float-icon fi-4"><i class="fab fa-node-js"></i></div>
+                <div class="float-icon fi-5"><i class="fas fa-database"></i></div>
+                <div class="float-icon fi-6"><i class="fab fa-docker"></i></div>
+                <div class="float-icon fi-7"><i class="fas fa-microchip"></i></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Building the future, one line of code at a time</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrap" data-aos>
+                    <div class="about-image-frame">
+                        <img src="assets/images/profile.png" alt="Elakiya - AI Developer" class="about-photo"
+                            id="aboutPhoto" />
+                        <div class="image-glow"></div>
+                    </div>
+                    <div class="about-badges">
+                        <div class="about-badge badge-ai">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Developer</span>
+                        </div>
+                        <div class="about-badge badge-web">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="about-badge badge-data">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content" data-aos>
+                    <h3 class="about-heading">AI Developer & Full Stack Engineer</h3>
+                    <p class="about-text">
+                        I am a B.Tech IT student at Ramco Institute of Technology (2022-2026) with a passion for
+                        building intelligent systems. I specialize in AI-driven solutions, full-stack web applications,
+                        and browser automation, bringing hands-on experience from multiple internships to every project.
+                    </p>
+                    <p class="about-text">
+                        My journey in tech is driven by curiosity in <strong>Machine Learning</strong>, <strong>Full
+                            Stack Development</strong>, and <strong>Data Structures</strong>. I thrive on solving
+                        complex problems and turning data into actionable insights through scalable software.
+                    </p>
+                    <div class="about-focus">
+                        <div class="focus-item">
+                            <div class="focus-icon"><i class="fas fa-brain"></i></div>
+                            <div class="focus-info">
+                                <h4>AI Development</h4>
+                                <p>Machine learning models & computer vision systems</p>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon"><i class="fas fa-globe"></i></div>
+                            <div class="focus-info">
+                                <h4>Web Development</h4>
+                                <p>Full-stack MERN applications & REST APIs</p>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon"><i class="fas fa-robot"></i></div>
+                            <div class="focus-info">
+                                <h4>Automation</h4>
+                                <p>Intelligent automation & data pipeline systems</p>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="focus-info">
+                                <h4>Data Analytics</h4>
+                                <p>Data visualization & analytics dashboards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-education"
+                style="margin: 40px auto 0; max-width: 600px; padding: 24px; background: var(--bg-glass); border-radius: var(--radius-lg); border: 1px solid var(--border-glass);">
+                <h4 style="font-size: 1.1rem; margin-bottom: 20px; color: var(--neon-blue); text-align: center;"><i
+                        class="fas fa-graduation-cap"></i> Education</h4>
+                <div class="edu-item" style="margin-bottom: 20px;">
+                    <h5 style="font-size: 0.95rem; margin-bottom: 4px;">Ramco Institute of Technology</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">B.Tech - IT | <strong>CGPA:
+                            7.75</strong></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">2022 - 2026</p>
+                </div>
+                <div class="edu-item" style="margin-bottom: 10px;">
+                    <h5 style="font-size: 0.9rem; margin-bottom: 4px;">Perunthalaivar Kamaraj HSS</h5>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary);">HSC: 73.6% | SSLC: 79.3%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">A comprehensive toolkit for building cutting-edge solutions</p>
+            </div>
+
+            <div class="skills-categories" data-aos>
+                <button class="skill-cat-btn active" data-cat="all">All</button>
+                <button class="skill-cat-btn" data-cat="programming">Programming</button>
+                <button class="skill-cat-btn" data-cat="web">Web Dev</button>
+                <button class="skill-cat-btn" data-cat="ai">AI / Data</button>
+                <button class="skill-cat-btn" data-cat="tools">Tools</button>
+            </div>
+
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Programming -->
+                <div class="skill-card" data-cat="programming" data-aos>
+                    <div class="skill-card-icon skill-python"><i class="fab fa-python"></i></div>
+                    <h4 class="skill-name">Python</h4>
+                    <p class="skill-cat-label">Programming</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card" data-cat="programming" data-aos>
+                    <div class="skill-card-icon skill-js"><i class="fab fa-js-square"></i></div>
+                    <h4 class="skill-name">JavaScript</h4>
+                    <p class="skill-cat-label">Programming</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card" data-cat="programming" data-aos>
+                    <div class="skill-card-icon skill-sql"><i class="fas fa-code"></i></div>
+                    <h4 class="skill-name">Java</h4>
+                    <p class="skill-cat-label">Programming</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card" data-cat="web" data-aos>
+                    <div class="skill-card-icon skill-react"><i class="fab fa-react"></i></div>
+                    <h4 class="skill-name">React.js</h4>
+                    <p class="skill-cat-label">Web Development</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="88"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-card" data-cat="web" data-aos>
+                    <div class="skill-card-icon skill-node"><i class="fab fa-node-js"></i></div>
+                    <h4 class="skill-name">Node.js / Express</h4>
+                    <p class="skill-cat-label">Web Development</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card" data-cat="web" data-aos>
+                    <div class="skill-card-icon skill-pg"><i class="fab fa-php"></i></div>
+                    <h4 class="skill-name">PHP / MySQL</h4>
+                    <p class="skill-cat-label">Web Development</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="82"></div>
+                    </div>
+                    <span class="skill-percent">82%</span>
+                </div>
+                <div class="skill-card" data-cat="web" data-aos>
+                    <div class="skill-card-icon skill-mern"><i class="fas fa-layer-group"></i></div>
+                    <h4 class="skill-name">MERN Stack</h4>
+                    <p class="skill-cat-label">Web Development</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="88"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+
+                <!-- AI / ML -->
+                <div class="skill-card" data-cat="ai" data-aos>
+                    <div class="skill-card-icon skill-ml"><i class="fas fa-brain"></i></div>
+                    <h4 class="skill-name">Scikit-learn / Pandas</h4>
+                    <p class="skill-cat-label">ML & Data</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card" data-cat="ai" data-aos>
+                    <div class="skill-card-icon skill-cv"><i class="fas fa-vial"></i></div>
+                    <h4 class="skill-name">Model Evaluation</h4>
+                    <p class="skill-cat-label">ML & Data</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="82"></div>
+                    </div>
+                    <span class="skill-percent">82%</span>
+                </div>
+                <div class="skill-card" data-cat="ai" data-aos>
+                    <div class="skill-card-icon skill-da"><i class="fas fa-filter"></i></div>
+                    <h4 class="skill-name">Data Preprocessing</h4>
+                    <p class="skill-cat-label">ML & Data</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="88"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card" data-cat="tools" data-aos>
+                    <div class="skill-card-icon skill-git"><i class="fab fa-git-alt"></i></div>
+                    <h4 class="skill-name">Git / VS Code</h4>
+                    <p class="skill-cat-label">Tools</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card" data-cat="tools" data-aos>
+                    <div class="skill-card-icon skill-docker"><i class="fas fa-terminal"></i></div>
+                    <h4 class="skill-name">Go / Chromium</h4>
+                    <p class="skill-cat-label">Tools</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="75"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-card" data-cat="tools" data-aos>
+                    <div class="skill-card-icon skill-sql"><i class="fas fa-server"></i></div>
+                    <h4 class="skill-name">REST APIs</h4>
+                    <p class="skill-cat-label">Tools</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Real-world solutions powered by AI and modern technology</p>
+            </div>
+
+            <div class="projects-filter" data-aos>
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+
+                <div class="project-card" data-filter="ai" data-aos>
+                    <div class="project-card-header">
+                        <div class="project-icon project-icon-eye">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-category-tag">AI / Healthcare</span>
+                        <h3 class="project-title">DeepEye – AI Eye Screening</h3>
+                        <p class="project-description">
+                            Healthcare platform for patient registration, eye scan data management, and AI-based risk
+                            analysis using Node.js, Express, and PostgreSQL.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="analytics" data-aos>
+                    <div class="project-card-header">
+                        <div class="project-icon project-icon-security">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-category-tag">Automation / Go</span>
+                        <h3 class="project-title">PinchTab – Browser Automation</h3>
+                        <p class="project-description">
+                            Configured headless Chromium via Go backend; built CRM automation workflows in AdSyncro for
+                            lead management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Chromium</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">CRM</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="ai" data-aos>
+                    <div class="project-card-header">
+                        <div class="project-icon project-icon-driver">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-category-tag">ML / Healthcare</span>
+                        <h3 class="project-title">Breast Cancer Prediction</h3>
+                        <p class="project-description">
+                            ML model using Naive Bayes, KNN, and SVC achieving 95% accuracy with cross-validation for
+                            early cancer detection.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="web" data-aos>
+                    <div class="project-card-header">
+                        <div class="project-icon project-icon-library">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-category-tag">Full Stack</span>
+                        <h3 class="project-title">Library Management System</h3>
+                        <p class="project-description">
+                            Full-stack system using PHP and MySQL with admin panel, secure login, borrowing features,
+                            and data validation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE SECTION ============ -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">Career</span>
+                <h2 class="section-title">Experience & <span class="gradient-text">Internship</span></h2>
+                <p class="section-subtitle">The journey that shaped my technical expertise</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot"
+                        style="background: var(--neon-pink); box-shadow: 0 0 12px var(--neon-pink);"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-role-icon" style="color: var(--neon-pink);"><i
+                                    class="fas fa-code-branch"></i></div>
+                            <div>
+                                <h3 class="timeline-role">Web Development Intern</h3>
+                                <span class="timeline-company">TechnoHacks</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Designed and optimized responsive websites using HTML, CSS, and
+                            JavaScript.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot dot-web"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-role-icon"><i class="fas fa-code"></i></div>
+                            <div>
+                                <h3 class="timeline-role">Full Stack Dev Intern</h3>
+                                <span class="timeline-company">Astroweb Solutions</span>
+                            </div>
+                            <span class="timeline-badge badge-web">MERN Stack</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Built MERN stack apps with authentication, CRUD operations, and responsive UI using
+                            real-time project workflows.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot dot-ai"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-role-icon"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <h3 class="timeline-role">AI / ML Intern</h3>
+                                <span class="timeline-company">InternPe</span>
+                            </div>
+                            <span class="timeline-badge badge-current">Recent</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Developed ML classification models for data processing and prediction tasks using Python.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot dot-auto"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-role-icon"><i class="fas fa-robot"></i></div>
+                            <div>
+                                <h3 class="timeline-role">Machine Learning Intern</h3>
+                                <span class="timeline-company">Geons Logix</span>
+                            </div>
+                            <span class="timeline-badge badge-auto">Python</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Implemented ML algorithms for data analysis and prediction using Python-based tools.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS SECTION ============ -->
+    <section class="section achievements-section" id="achievements">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">Highlights</span>
+                <h2 class="section-title">Achievements & <span class="gradient-text">Stats</span></h2>
+                <p class="section-subtitle">Numbers that tell the story of my journey</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos>
+                    <div class="achievement-icon ach-ai"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-counter" data-target="1">0</div>
+                    <h4 class="achievement-title">1st Prize<br>Oratory Contest</h4>
+                    <p class="achievement-desc">Yavarum Kelir Skill Development Association</p>
+                </div>
+                <div class="achievement-card" data-aos>
+                    <div class="achievement-icon ach-web"><i class="fas fa-award"></i></div>
+                    <div class="achievement-counter" data-target="1">0</div>
+                    <h4 class="achievement-title">1st Place<br>Guess Nook Quiz</h4>
+                    <p class="achievement-desc">PSR Engineering College</p>
+                </div>
+                <div class="achievement-card" data-aos>
+                    <div class="achievement-icon ach-tech"><i class="fas fa-square-root-alt"></i></div>
+                    <div class="achievement-counter" data-target="2024">0</div>
+                    <h4 class="achievement-title">Mathematical<br>Competition</h4>
+                    <p class="achievement-desc">National Level - ISTE TN (2024)</p>
+                </div>
+                <div class="achievement-card" data-aos>
+                    <div class="achievement-icon ach-intern"><i class="fas fa-shield-alt"></i></div>
+                    <h4 class="achievement-title" style="margin-top: 15px;">Trainings &<br>Certifications</h4>
+                    <p class="achievement-desc" style="font-size: 0.75rem;">Cyber Security, Robotics, Flutter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Open to opportunities, collaborations, and interesting conversations</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos>
+                    <h3 class="contact-info-title">Let's Build Something Amazing</h3>
+                    <p class="contact-info-text">
+                        Whether you have a project idea, a job opportunity, or just want to chat about AI and tech — my
+                        inbox is always open. I'll get back to you as soon as possible!
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:elakiyaerulappasamy16@gmail.com" class="contact-item" id="emailContact">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">Email</span>
+                                <span class="contact-item-value">elakiyaerulappasamy16@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/elakiya-e-01148626a" target="_blank" class="contact-item"
+                            id="linkedinContact">
+                            <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">LinkedIn</span>
+                                <span class="contact-item-value">elakiya-e-01148626a</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/elakiya" target="_blank" class="contact-item" id="githubContact">
+                            <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">GitHub</span>
+                                <span class="contact-item-value">github.com/elakiya</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item" id="portfolioContact">
+                            <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">Portfolio</span>
+                                <span class="contact-item-value">elakiya.dev</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" id="githubSocial" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" id="linkedinSocial" title="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link" id="twitterSocial" title="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" id="kaggleSocial" title="Kaggle"><i
+                                class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-aos>
+                    <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="contactName" class="form-label">Your Name</label>
+                            <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail" class="form-label">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" class="form-input"
+                                placeholder="john@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject" class="form-label">Subject</label>
+                            <input type="text" id="contactSubject" name="subject" class="form-input"
+                                placeholder="Project Collaboration" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea id="contactMessage" name="message" class="form-input form-textarea"
+                                placeholder="Tell me about your project or opportunity..." required rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span class="btn-submit-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>Elakiya<span class="logo-bracket">/&gt;</span>
+                    </div>
+                    <p class="footer-tagline">AI Developer | Full Stack Engineer<br>Building Intelligent Digital
+                        Solutions</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="footer-social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="footer-social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">Navigation</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">Projects</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#projects">DeepEyeScan</a></li>
+                        <li><a href="#projects">Library System</a></li>
+                        <li><a href="#projects">Driver Eye Screening</a></li>
+                        <li><a href="#projects">Security Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">Contact</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="mailto:elakiya@example.com">elakiya@example.com</a></li>
+                        <li><a href="#">LinkedIn Profile</a></li>
+                        <li><a href="#">GitHub Profile</a></li>
+                        <li><a href="#" onclick="downloadResume(); return false;">Download Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; 2025 <strong>Elakiya</strong>. All rights reserved.
+                </p>
+                <p class="footer-built">
+                    Built with <span class="heart">♥</span> using modern web technologies
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
